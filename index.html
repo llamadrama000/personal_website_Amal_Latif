@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amal Latif - Personal Website</title>
+    <title>Amal Latif - Home</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,6 +17,7 @@
             color: white;
             text-align: center;
             padding: 2em;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
         header h1 {
             margin: 0;
@@ -25,37 +26,74 @@
         nav {
             background-color: #34495e;
             padding: 1em;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         nav a {
             color: white;
-            margin: 0 1em;
+            margin: 0 1.5em;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s;
         }
         nav a:hover {
             color: #3498db;
         }
         .container {
-            max-width: 800px;
+            display: flex;
+            max-width: 1200px;
             margin: 2em auto;
             padding: 0 1em;
         }
-        .bio, .contact, .skills, .projects {
+        .sidebar {
+            width: 25%;
+            background: #ecf0f1;
+            padding: 1.5em;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+        }
+        .sidebar h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5em;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar li {
+            margin: 0.5em 0;
+        }
+        .sidebar a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .sidebar a:hover {
+            color: #2980b9;
+        }
+        .main-content {
+            width: 75%;
+            padding-left: 2em;
+        }
+        .section {
             background: white;
             padding: 1.5em;
             margin-bottom: 1em;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
         }
-        .bio h2, .contact h2, .skills h2, .projects h2 {
+        .section:hover {
+            transform: translateY(-5px);
+        }
+        .section h2 {
             color: #2c3e50;
-        }
-        .contact a, .projects a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        .contact a:hover, .projects a:hover {
-            text-decoration: underline;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5em;
         }
         .back-to-top {
             text-align: center;
@@ -73,9 +111,8 @@
             padding: 1em;
             background-color: #2c3e50;
             color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            margin-top: 2em;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
         }
     </style>
 </head>
@@ -85,59 +122,36 @@
         <p>M.S. in Business Analytics | B.S. in Business Administration (CIS)</p>
     </header>
     <nav>
-        <a href="#home">Home</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a href="resume.html">Resume</a>
     </nav>
     <div class="container">
-        <section id="home" class="bio">
-            <h2>Hello</h2>
-            <p>
-                I'm Amal Latif, an honors graduate with a B.S. in Business Administration (Computer Information Systems) from California State Polytechnic University, Pomona, and pursuing an M.S. in Business Analytics at UCI Paul Merage School of Business. I'm proficient in Python, SQL, C++, Java, HTML/CSS, and data analysis tools like Excel and Oracle VirtualBox. My experience includes a Social Media Digital Marketing Internship at Wonder Women Tech and technical projects like the KittyEclipse Robotic Cat and NASA Food Desert Mapper. I'm passionate about leveraging technology for impactful solutions.
-            </p>
-            <p>
-                Explore my projects and skills below to learn more about my work. Thank you!
-            </p>
-        </section>
-        <section id="skills" class="skills">
-            <h2>Technical Skills</h2>
+        <aside class="sidebar">
+            <h3>On this page</h3>
             <ul>
-                <li><strong>Programming:</strong> Python, SQL, C++, Java, HTML/CSS</li>
-                <li><strong>Data Analysis:</strong> Excel, Oracle VirtualBox, Linux</li>
-                <li><strong>Design:</strong> Canva, CapCut</li>
-                <li><strong>Languages:</strong> Fluent in Urdu, Hindi, and English</li>
+                <li><a href="#introduction">Introduction</a></li>
             </ul>
-        </section>
-        <section id="projects" class="projects">
-            <h2>Technical Projects</h2>
-            <p>
-                <strong>KittyEclipse Robotic Cat</strong> | Cal Poly Pomona | Dec 2024 – Present<br/>
-                Programmed emotional response algorithms in Python/C++ for a therapeutic robotic companion. Collaborated with hardware team to integrate touch/sound sensors.<br/>
-                <a href="https://github.com/llamadrama000" target="_blank">View on GitHub</a>
-            </p>
-            <p>
-                <strong>NASA Food Desert Mapper</strong> | NASA Space Apps Challenge | Oct 2024<br/>
-                Developed an interactive web app using HTML/CSS/Leaflet.js to visualize food deserts. Integrated USDA and community-reported data.<br/>
-                <a href="https://github.com/llamadrama000/Food-Desert_NASASpaceApps" target="_blank">View on GitHub</a>
-            </p>
-            <p>
-                <strong>Women in Tech Website Redesign</strong> | Cal Poly Pomona | May 2024 – Spring 2025<br/>
-                Co-led development of a Node.js website for 200+ members, implementing ADA-compliant design.<br/>
-                <a href="https://www.calpolywit.org" target="_blank">Visit Website</a> | <a href="https://github.com/llamadrama000/Web-Dev_WomenInTech" target="_blank">View on GitHub</a>
-            </p>
-        </section>
-        <section id="contact" class="contact">
-            <h2>Contact Information</h2>
-            <p>Email: <a href="mailto:latifamal1025@gmail.com">latifamal1025@gmail.com</a></p>
-            <p>Mobile: 657.527.1747</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/amal-latif-b84b68212" target="_blank">linkedin.com/in/amal-latif-b84b68212</a></p>
-            <p>GitHub: <a href="https://github.com/llamadrama000" target="_blank">github.com/llamadrama000</a></p>
-            <p>Resume: <a href="./Amal_Latif_2025.pdf" target="_blank">Download Resume</a></p>
-        </section>
-        <div class="back-to-top">
-            <a href="#top">Back to top</a>
-        </div>
+        </aside>
+        <main class="main-content">
+            <section id="introduction" class="section">
+                <h2>Hello</h2>
+                <p>
+                    I'm Amal Latif, an honors graduate (Dean’s List & President’s Honor Roll) with a B.S. in Business Administration (Computer Information Systems) from California State Polytechnic University, Pomona, and currently pursuing an M.S. in Business Analytics at UCI Paul Merage School of Business. Based in Laguna Hills, CA, I’m passionate about leveraging technology and data to create impactful solutions.
+                </p>
+                <p>
+                    I’m proficient in Python, SQL, C++, Java, HTML/CSS, and tools like AWS, CISCO Packet Tracer, and Microsoft Access. My experience includes a Social Media Digital Marketing Internship at Wonder Woman Tech and technical projects like the KittyEclipse Robotic Therapy Cat and NASA Space Apps Challenge. As an active member of Women in Tech, Software Engineering Association, and MISSA, I thrive in collaborative environments.
+                </p>
+                <p>
+                    Explore my skills, projects, and contact details to learn more about my work. Thank you for visiting!
+                </p>
+            </section>
+            <div class="back-to-top">
+                <a href="#top">Back to top</a>
+            </div>
+        </main>
     </div>
     <footer>
         <p>&copy; 2025 Amal Latif. All rights reserved.</p>
