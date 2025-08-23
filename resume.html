@@ -129,6 +129,11 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             margin-top: 1em;
         }
+        .error-message {
+            color: #ff6f61;
+            margin-top: 1em;
+            display: none;
+        }
         .back-to-top {
             text-align: center;
             margin: 1.5em 0;
@@ -187,7 +192,8 @@
             <section id="full-resume" class="section">
                 <h2>Full Resume</h2>
                 <p><a href="./Amal Latif.png" download="Amal_Latif_Resume.png">Download Resume</a></p>
-                <img src="./Amal Latif.png" alt="Amal Latif Resume" class="resume-img">
+                <img src="./Amal Latif.png" alt="Amal Latif Resume" class="resume-img" onerror="this.style.display='none'; document.getElementById('error-message').style.display='block';">
+                <p id="error-message" class="error-message">Resume image failed to load. Please download the resume or try again later.</p>
             </section>
             <div class="back-to-top">
                 <a href="#top">Back to top</a>
