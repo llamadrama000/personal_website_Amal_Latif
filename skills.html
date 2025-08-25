@@ -10,11 +10,11 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f4f8;
-            color: #2d3436;
+            background-color: #fafafa;
+            color: #2d2d2d;
         }
         header {
-            background: linear-gradient(135deg, #1abc9c, #3498db);
+            background: linear-gradient(135deg, #1a3152, #4682b4);
             color: white;
             text-align: center;
             padding: 3em 1em;
@@ -24,14 +24,16 @@
             margin: 0;
             font-size: 2.8em;
             font-weight: 600;
+            color: white;
         }
         header p {
             margin: 0.5em 0;
             font-size: 1.2em;
             font-weight: 300;
+            color: white;
         }
         nav {
-            background-color: #2d3436;
+            background-color: #333333;
             padding: 1em;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -45,7 +47,7 @@
             transition: color 0.3s, transform 0.3s;
         }
         nav a:hover {
-            color: #ff6f61;
+            color: #d4a017;
             transform: scale(1.1);
         }
         .container {
@@ -57,7 +59,7 @@
         }
         .sidebar {
             width: 25%;
-            background: white;
+            background: linear-gradient(135deg, #f5f6f5, #fafafa);
             padding: 1.5em;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -67,9 +69,10 @@
             animation: fadeIn 1s ease-in;
         }
         .sidebar h3 {
-            color: #1abc9c;
-            border-bottom: 2px solid #ff6f61;
+            color: #4682b4;
+            border-bottom: 2px solid #d4a017;
             padding-bottom: 0.5em;
+            font-size: 1.8em;
             font-weight: 600;
         }
         .sidebar ul {
@@ -80,71 +83,90 @@
             margin: 0.8em 0;
         }
         .sidebar a {
-            color: #3498db;
+            color: #4682b4;
             text-decoration: none;
-            transition: color 0.3s;
+            font-weight: 400;
+            font-size: 0.9em;
+            transition: color 0.3s, padding-left 0.3s;
         }
         .sidebar a:hover {
-            color: #ff6f61;
+            color: #d4a017;
+            padding-left: 0.5em;
+        }
+        .sidebar ul ul {
+            padding-left: 1em;
         }
         .main-content {
             width: 75%;
+            padding-left: 2em;
         }
         .section {
-            background: white;
+            background: #ffffff;
             padding: 2em;
             margin-bottom: 1.5em;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             animation: fadeIn 1s ease-in;
             transition: transform 0.3s;
+            border-left: 4px solid #4682b4;
         }
         .section:hover {
             transform: translateY(-5px);
         }
         .section h2 {
-            color: #1abc9c;
-            border-bottom: 2px solid #ff6f61;
+            color: #2d2d2d;
+            border-bottom: 2px solid #d4a017;
             padding-bottom: 0.5em;
+            font-size: 1.8em;
             font-weight: 600;
         }
         .section h3 {
-            color: #2d3436;
-            font-weight: 400;
+            color: #2d2d2d;
+            font-size: 1.4em;
+            font-weight: 600;
             margin-top: 1.5em;
         }
+        .section p {
+            margin: 0.5em 0;
+            line-height: 1.6;
+            font-size: 1em;
+            font-weight: 400;
+        }
         .section ul {
-            list-style: none;
-            padding: 0;
+            list-style: disc;
+            padding-left: 20px;
+            color: #d4a017;
         }
         .section li {
             margin: 0.5em 0;
-            padding-left: 1em;
-            position: relative;
+            padding: 0.5em 0;
+            background: #ffffff;
+            color: #2d2d2d;
+            font-size: 1em;
+            font-weight: 400;
+            transition: background 0.3s;
         }
-        .section li::before {
-            content: '•';
-            color: #ff6f61;
-            position: absolute;
-            left: 0;
+        .section li:hover {
+            background: #f5f6f5;
         }
         .back-to-top {
             text-align: center;
             margin: 1.5em 0;
         }
         .back-to-top a {
-            color: #3498db;
+            color: #4682b4;
             text-decoration: none;
             font-weight: 400;
+            font-size: 1em;
         }
         .back-to-top a:hover {
-            color: #ff6f61;
+            color: #d4a017;
             text-decoration: underline;
         }
         footer {
             text-align: center;
             padding: 1.5em;
-            background-color: #2d3436;
+            background-color: #333333;
             color: white;
             margin-top: 2em;
             box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
@@ -159,6 +181,7 @@
             }
             .sidebar, .main-content {
                 width: 100%;
+                padding-left: 0;
             }
         }
     </style>
@@ -170,6 +193,7 @@
     </header>
     <nav>
         <a href="index.html">Home</a>
+        <a href="education.html">Education</a>
         <a href="skills.html">Skills</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
@@ -180,54 +204,43 @@
             <h3>On this page</h3>
             <ul>
                 <li><a href="#technical-skills">Technical Skills</a></li>
-                <li><a href="#data">Data</a></li>
-                <li><a href="#business">Business</a></li>
+                <li><a href="#data-skills">Data Skills</a></li>
                 <li><a href="#soft-skills">Soft Skills</a></li>
             </ul>
         </aside>
         <main class="main-content">
             <section id="technical-skills" class="section">
                 <h2>Technical Skills</h2>
-                <h3>Programming</h3>
                 <ul>
-                    <li>Python</li>
-                    <li>SQL</li>
-                    <li>C++</li>
-                    <li>Java</li>
-                    <li>HTML/CSS</li>
-                </ul>
-                <h3>Tools</h3>
-                <ul>
-                    <li>AWS</li>
-                    <li>CISCO Packet Tracer</li>
+                    <li>Python (pandas, NumPy, Matplotlib, Scikit-learn, Seaborn, TensorFlow, Plotly)</li>
+                    <li>SQL, Java, C++, HTML, CSS</li>
+                    <li>CISCO (CISCO Packet Tracer), AWS(Spark, Hadoop), ERWIN Data Modeler</li>
+                    <li>Git/GitHub, Jupyter Notebook, Visual Studio, Eclipse</li>
+                    <li>Microsoft Excel (Pivot Tables, VLOOKUP, HLOOKUP, INDEX-MATCH, etc.)</li>
                     <li>Microsoft Access</li>
-                    <li>ArcGIS</li>
+                    <li>Google Data Analytics, Google Tag Manager</li>
+                    <li>Embedded Systems, Robot Programming, API Integration</li>
+                    <li>Full-Stack Development, UI/UX Design, ADA Compliance, Node.js</li>
+                    <li>Linux, Windows, Oracle Virtual Box</li>
+                    <li>Front-End Development, Leaflet.js, ArcGIS, Geospatial Modeling, Data Integration</li>
                 </ul>
             </section>
-            <section id="data" class="section">
-                <h2>Data</h2>
+            <section id="data-skills" class="section">
+                <h2>Data Skills</h2>
                 <ul>
-                    <li>Database Design and Development</li>
-                    <li>Advanced Data Analytics and Visualizations</li>
-                    <li>Data Visualization</li>
-                    <li>Business Intelligence</li>
-                </ul>
-            </section>
-            <section id="business" class="section">
-                <h2>Business</h2>
-                <ul>
-                    <li>Project Management</li>
-                    <li>Digital Marketing</li>
-                    <li>Data-Driven Decision Making</li>
+                    <li>Data Management & Warehousing: Database Design and Development; Business Intelligence and Reporting Systems</li>
+                    <li>Programming & Infrastructure: Object-Oriented Programming for Business; Cloud Infrastructure Design and Deployment; Operating System Fundamentals</li>
+                    <li>Analytics & Modeling: Location Analytics; Web and Mobile Analytics; Statistical Foundations for Business Analytics</li>
+                    <li>Advanced Data Science: Data Mining and Big Data Analytics using Spark; Predictive Modeling; Machine Learning Applications</li>
                 </ul>
             </section>
             <section id="soft-skills" class="section">
                 <h2>Soft Skills</h2>
                 <ul>
-                    <li>Effective Communication</li>
-                    <li>Team Collaboration</li>
-                    <li>Problem Solving</li>
-                    <li>Adaptability</li>
+                    <li>Communication, Team and Cross-Functional Collaboration, Active Listening</li>
+                    <li>Time Management, Project/Team Management, Leadership, Adaptability</li>
+                    <li>Problem-Solving, Critical Thinking, Decision-Making, Multitasking</li>
+                    <li>Detail Orientation, Efficient Organization, Creativity</li>
                 </ul>
             </section>
             <div class="back-to-top">

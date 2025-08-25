@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amal Latif - Home</title>
+    <title>Amal Latif - Education</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -120,17 +120,40 @@
             font-size: 1.8em;
             font-weight: 600;
         }
+        .section h3 {
+            color: #2d2d2d;
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-top: 1.5em;
+        }
         .section p {
             margin: 0.5em 0;
             line-height: 1.6;
             font-size: 1em;
             font-weight: 400;
         }
-        .section img {
-            max-width: 200px;
-            border-radius: 10px;
-            margin: 1em 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        .section .date {
+            font-size: 0.9em;
+            color: #2d2d2d;
+            font-weight: 400;
+            margin: 0.5em 0;
+        }
+        .section ul {
+            list-style: disc;
+            padding-left: 20px;
+            color: #d4a017;
+        }
+        .section li {
+            margin: 0.5em 0;
+            padding: 0.5em 0;
+            background: #ffffff;
+            color: #2d2d2d;
+            font-size: 1em;
+            font-weight: 400;
+            transition: background 0.3s;
+        }
+        .section li:hover {
+            background: #f5f6f5;
         }
         .back-to-top {
             text-align: center;
@@ -166,9 +189,6 @@
                 width: 100%;
                 padding-left: 0;
             }
-            .section img {
-                max-width: 100%;
-            }
         }
     </style>
 </head>
@@ -189,14 +209,47 @@
         <aside class="sidebar">
             <h3>On this page</h3>
             <ul>
-                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a>
+                    <ul>
+                        <li><a href="#ms-analytics">M.S. Business Analytics</a></li>
+                        <li><a href="#bs-cis">B.S. Business Administration (CIS)</a></li>
+                    </ul>
+                </li>
+                <li><a href="#awards">Awards</a>
+                    <ul>
+                        <li><a href="#presidents-list">President’s List</a></li>
+                        <li><a href="#deans-list">Dean’s List</a></li>
+                    </ul>
+                </li>
             </ul>
         </aside>
         <main class="main-content">
-            <section id="about" class="section">
-                <h2>About</h2>
-                <img src="Professional Headshot.JPEG" alt="Amal Latif Headshot">
-                <p>I am an honors graduate (Dean’s List & President’s Honor Roll) in Business Administration (CIS) with a passion for technology and analytics. My experience spans web development, cybersecurity, and data analysis, with projects like building a robotic therapy cat and developing a website for Women in Tech. I’m skilled in Python, C++, Node.js, and HTML/CSS, and I thrive in collaborative environments, as shown in hackathons like NASA Space Apps Challenge and Hivestorm.</p>
+            <section id="education" class="section">
+                <h2>Education</h2>
+                <h3 id="ms-analytics">University of California Irvine, M.S. in Business Analytics</h3>
+                <p class="date">May 2026</p>
+                <ul>
+                    <li>Pursuing advanced studies in data analytics, focusing on statistical modeling and business intelligence.</li>
+                </ul>
+                <h3 id="bs-cis">California State Polytechnic University Pomona, B.S. in Business Administration (CIS)</h3>
+                <p class="date">May 2025</p>
+                <ul>
+                    <li>Graduated with honors, Dean’s List and President’s Honor Roll.</li>
+                    <li>Specialized in Computer Information Systems, with coursework in programming, database management, and systems analysis.</li>
+                </ul>
+            </section>
+            <section id="awards" class="section">
+                <h2>Awards</h2>
+                <h3 id="presidents-list">President’s List</h3>
+                <p class="date">2024–2025</p>
+                <ul>
+                    <li>Recognized by President Soraya M. Coley for exceptional academic standing throughout the 2024-2025 year.</li>
+                </ul>
+                <h3 id="deans-list">Dean’s List</h3>
+                <p class="date">Spring, Summer, Fall 2024</p>
+                <ul>
+                    <li>Received for maintaining above a 3.5 semester GPA over multiple semesters.</li>
+                </ul>
             </section>
             <div class="back-to-top">
                 <a href="#top">Back to top</a>

@@ -10,11 +10,11 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f4f8;
-            color: #2d3436;
+            background-color: #fafafa;
+            color: #2d2d2d;
         }
         header {
-            background: linear-gradient(135deg, #1abc9c, #3498db);
+            background: linear-gradient(135deg, #1a3152, #4682b4);
             color: white;
             text-align: center;
             padding: 3em 1em;
@@ -24,14 +24,16 @@
             margin: 0;
             font-size: 2.8em;
             font-weight: 600;
+            color: white;
         }
         header p {
             margin: 0.5em 0;
             font-size: 1.2em;
             font-weight: 300;
+            color: white;
         }
         nav {
-            background-color: #2d3436;
+            background-color: #333333;
             padding: 1em;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -45,7 +47,7 @@
             transition: color 0.3s, transform 0.3s;
         }
         nav a:hover {
-            color: #ff6f61;
+            color: #d4a017;
             transform: scale(1.1);
         }
         .container {
@@ -57,7 +59,7 @@
         }
         .sidebar {
             width: 25%;
-            background: white;
+            background: linear-gradient(135deg, #f5f6f5, #fafafa);
             padding: 1.5em;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -67,9 +69,10 @@
             animation: fadeIn 1s ease-in;
         }
         .sidebar h3 {
-            color: #1abc9c;
-            border-bottom: 2px solid #ff6f61;
+            color: #4682b4;
+            border-bottom: 2px solid #d4a017;
             padding-bottom: 0.5em;
+            font-size: 1.8em;
             font-weight: 600;
         }
         .sidebar ul {
@@ -80,77 +83,90 @@
             margin: 0.8em 0;
         }
         .sidebar a {
-            color: #3498db;
+            color: #4682b4;
             text-decoration: none;
-            transition: color 0.3s;
+            font-weight: 400;
+            font-size: 0.9em;
+            transition: color 0.3s, padding-left 0.3s;
         }
         .sidebar a:hover {
-            color: #ff6f61;
+            color: #d4a017;
+            padding-left: 0.5em;
+        }
+        .sidebar ul ul {
+            padding-left: 1em;
         }
         .main-content {
             width: 75%;
+            padding-left: 2em;
         }
         .section {
-            background: white;
+            background: #ffffff;
             padding: 2em;
             margin-bottom: 1.5em;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             animation: fadeIn 1s ease-in;
             transition: transform 0.3s;
+            border-left: 4px solid #4682b4;
         }
         .section:hover {
             transform: translateY(-5px);
         }
         .section h2 {
-            color: #1abc9c;
-            border-bottom: 2px solid #ff6f61;
+            color: #2d2d2d;
+            border-bottom: 2px solid #d4a017;
             padding-bottom: 0.5em;
+            font-size: 1.8em;
             font-weight: 600;
         }
+        .section h3 {
+            color: #2d2d2d;
+            font-size: 1.4em;
+            font-weight: 600;
+            margin-top: 1.5em;
+        }
+        .section p {
+            margin: 0.5em 0;
+            line-height: 1.6;
+            font-size: 1em;
+            font-weight: 400;
+        }
+        .section img {
+            max-width: 600px;
+            width: 100%;
+            border-radius: 10px;
+            margin: 1em 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
         .section a {
-            color: #3498db;
+            color: #4682b4;
             text-decoration: none;
             font-weight: 400;
-            padding: 0.5em 1em;
-            border: 2px solid #3498db;
-            border-radius: 5px;
-            display: inline-block;
-            transition: background-color 0.3s, color 0.3s;
+            font-size: 1em;
         }
         .section a:hover {
-            background-color: #3498db;
-            color: white;
-        }
-        .resume-img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-top: 1em;
-        }
-        .error-message {
-            color: #ff6f61;
-            margin-top: 1em;
-            display: none;
+            color: #d4a017;
+            text-decoration: underline;
         }
         .back-to-top {
             text-align: center;
             margin: 1.5em 0;
         }
         .back-to-top a {
-            color: #3498db;
+            color: #4682b4;
             text-decoration: none;
             font-weight: 400;
+            font-size: 1em;
         }
         .back-to-top a:hover {
-            color: #ff6f61;
+            color: #d4a017;
             text-decoration: underline;
         }
         footer {
             text-align: center;
             padding: 1.5em;
-            background-color: #2d3436;
+            background-color: #333333;
             color: white;
             margin-top: 2em;
             box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
@@ -165,6 +181,10 @@
             }
             .sidebar, .main-content {
                 width: 100%;
+                padding-left: 0;
+            }
+            .section img {
+                max-width: 100%;
             }
         }
     </style>
@@ -176,6 +196,7 @@
     </header>
     <nav>
         <a href="index.html">Home</a>
+        <a href="education.html">Education</a>
         <a href="skills.html">Skills</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
@@ -185,15 +206,21 @@
         <aside class="sidebar">
             <h3>On this page</h3>
             <ul>
-                <li><a href="#full-resume">Full Resume</a></li>
+                <li><a href="#resume">Resume</a>
+                    <ul>
+                        <li><a href="#resume-download">Download</a></li>
+                        <li><a href="#resume-preview">Preview</a></li>
+                    </ul>
+                </li>
             </ul>
         </aside>
         <main class="main-content">
-            <section id="full-resume" class="section">
-                <h2>Full Resume</h2>
-                <p><a href="./Amal Latif.pdf" download="Amal_Latif_Resume.pdf">Download Resume (PDF)</a></p>
-                <img src="./Amal Latif.png" alt="Amal Latif Resume" class="resume-img" onerror="this.style.display='none'; document.getElementById('error-message').style.display='block';">
-                <p id="error-message" class="error-message">Resume image failed to load. Please download the resume or try again later.</p>
+            <section id="resume" class="section">
+                <h2>Resume</h2>
+                <h3 id="resume-download">Download</h3>
+                <p><a href="Amal Latif.pdf">Download My Resume</a></p>
+                <h3 id="resume-preview">Preview</h3>
+                <p><img src="Amal Latif.png" alt="Resume Preview"></p>
             </section>
             <div class="back-to-top">
                 <a href="#top">Back to top</a>

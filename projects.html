@@ -10,11 +10,11 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f4f8;
-            color: #2d3436;
+            background-color: #fafafa;
+            color: #2d2d2d;
         }
         header {
-            background: linear-gradient(135deg, #1abc9c, #3498db);
+            background: linear-gradient(135deg, #1a3152, #4682b4);
             color: white;
             text-align: center;
             padding: 3em 1em;
@@ -24,14 +24,16 @@
             margin: 0;
             font-size: 2.8em;
             font-weight: 600;
+            color: white;
         }
         header p {
             margin: 0.5em 0;
             font-size: 1.2em;
             font-weight: 300;
+            color: white;
         }
         nav {
-            background-color: #2d3436;
+            background-color: #333333;
             padding: 1em;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -45,7 +47,7 @@
             transition: color 0.3s, transform 0.3s;
         }
         nav a:hover {
-            color: #ff6f61;
+            color: #d4a017;
             transform: scale(1.1);
         }
         .container {
@@ -57,7 +59,7 @@
         }
         .sidebar {
             width: 25%;
-            background: white;
+            background: linear-gradient(135deg, #f5f6f5, #fafafa);
             padding: 1.5em;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -67,9 +69,10 @@
             animation: fadeIn 1s ease-in;
         }
         .sidebar h3 {
-            color: #1abc9c;
-            border-bottom: 2px solid #ff6f61;
+            color: #4682b4;
+            border-bottom: 2px solid #d4a017;
             padding-bottom: 0.5em;
+            font-size: 1.8em;
             font-weight: 600;
         }
         .sidebar ul {
@@ -80,49 +83,86 @@
             margin: 0.8em 0;
         }
         .sidebar a {
-            color: #3498db;
+            color: #4682b4;
             text-decoration: none;
-            transition: color 0.3s;
+            font-weight: 400;
+            font-size: 0.9em;
+            transition: color 0.3s, padding-left 0.3s;
         }
         .sidebar a:hover {
-            color: #ff6f61;
+            color: #d4a017;
+            padding-left: 0.5em;
+        }
+        .sidebar ul ul {
+            padding-left: 1em;
         }
         .main-content {
             width: 75%;
+            padding-left: 2em;
         }
         .section {
-            background: white;
+            background: #ffffff;
             padding: 2em;
             margin-bottom: 1.5em;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             animation: fadeIn 1s ease-in;
             transition: transform 0.3s;
+            border-left: 4px solid #4682b4;
         }
         .section:hover {
             transform: translateY(-5px);
         }
         .section h2 {
-            color: #1abc9c;
-            border-bottom: 2px solid #ff6f61;
+            color: #2d2d2d;
+            border-bottom: 2px solid #d4a017;
             padding-bottom: 0.5em;
+            font-size: 1.8em;
             font-weight: 600;
         }
         .section h3 {
-            color: #2d3436;
-            font-weight: 400;
+            color: #2d2d2d;
+            font-size: 1.4em;
+            font-weight: 600;
             margin-top: 1.5em;
         }
         .section p {
             margin: 0.5em 0;
-        }
-        .section a {
-            color: #3498db;
-            text-decoration: none;
+            line-height: 1.6;
+            font-size: 1em;
             font-weight: 400;
         }
+        .section .date {
+            font-size: 0.9em;
+            color: #2d2d2d;
+            font-weight: 400;
+            margin: 0.5em 0;
+        }
+        .section ul {
+            list-style: disc;
+            padding-left: 20px;
+            color: #d4a017;
+        }
+        .section li {
+            margin: 0.5em 0;
+            padding: 0.5em 0;
+            background: #ffffff;
+            color: #2d2d2d;
+            font-size: 1em;
+            font-weight: 400;
+            transition: background 0.3s;
+        }
+        .section li:hover {
+            background: #f5f6f5;
+        }
+        .section a {
+            color: #4682b4;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 1em;
+        }
         .section a:hover {
-            color: #ff6f61;
+            color: #d4a017;
             text-decoration: underline;
         }
         .back-to-top {
@@ -130,18 +170,19 @@
             margin: 1.5em 0;
         }
         .back-to-top a {
-            color: #3498db;
+            color: #4682b4;
             text-decoration: none;
             font-weight: 400;
+            font-size: 1em;
         }
         .back-to-top a:hover {
-            color: #ff6f61;
+            color: #d4a017;
             text-decoration: underline;
         }
         footer {
             text-align: center;
             padding: 1.5em;
-            background-color: #2d3436;
+            background-color: #333333;
             color: white;
             margin-top: 2em;
             box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
@@ -156,6 +197,7 @@
             }
             .sidebar, .main-content {
                 width: 100%;
+                padding-left: 0;
             }
         }
     </style>
@@ -167,6 +209,7 @@
     </header>
     <nav>
         <a href="index.html">Home</a>
+        <a href="education.html">Education</a>
         <a href="skills.html">Skills</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
@@ -176,25 +219,64 @@
         <aside class="sidebar">
             <h3>On this page</h3>
             <ul>
-                <li><a href="#professional-experience">Professional Experience</a></li>
-                <li><a href="#personal-projects">Personal Projects</a></li>
+                <li><a href="#projects">Projects</a>
+                    <ul>
+                        <li><a href="#kittyeclipse">KittyEclipse Robotic Therapy Cat</a></li>
+                        <li><a href="#women-in-tech">Women in Tech Website Development</a></li>
+                        <li><a href="#hivestorm">Hivestorm Cybersecurity Competition</a></li>
+                        <li><a href="#nasa-space-apps">NASA Space Apps Challenge</a></li>
+                        <li><a href="#questiongenie">QuestionGenie AI Learning Assistant</a></li>
+                        <li><a href="#supply-chain-analysis">Supply Chain Analysis</a></li>
+                        <li><a href="#etsy-analysis">Etsy Analysis</a></li>
+                    </ul>
+                </li>
             </ul>
         </aside>
         <main class="main-content">
-            <section id="professional-experience" class="section">
-                <h2>Professional Experience</h2>
-                <h3>Social Media Digital Marketing Intern</h3>
-                <p>Wonder Woman Tech, Remote — Summer 2023</p>
-                <p>
-                    Developed and executed digital marketing strategies, increasing engagement by 20% through targeted social media campaigns. Collaborated with a team to create content for events and initiatives, leveraging tools like Canva and Hootsuite.
-                </p>
-            </section>
-            <section id="personal-projects" class="section">
-                <h2>Personal Projects</h2>
-                <p>
-                    For detailed insights into my projects, including KittyEclipse Robotic Therapy Cat and NASA Space Apps Challenge, please visit my LinkedIn: 
-                    <a href="https://www.linkedin.com/in/amal-latif-b84b68212" target="_blank">linkedin.com/in/amal-latif-b84b68212</a>.
-                </p>
+            <section id="projects" class="section">
+                <h2>Projects</h2>
+                <h3 id="kittyeclipse">KittyEclipse Robotic Therapy Cat</h3>
+                <p class="date">December 2024 - Present</p>
+                <ul>
+                    <li>Programmed emotional responses for a therapeutic robotic cat using Python/C++, enabling reactions to touch/sound to comfort users unable to have real pets.</li>
+                    <li>Collaborated with engineers to integrate software with 3D-printed parts and sensors, applying embedded systems knowledge through hands-on problem-solving.</li>
+                </ul>
+                <h3 id="women-in-tech">Women in Tech Website Development</h3>
+                <p class="date">May 2024 - May 2025</p>
+                <ul>
+                    <li>Co-led development of Women in Tech's first website using Node.js and HTML/CSS, designing key pages like "Meet the Team" while ensuring ADA compliance.</li>
+                    <li>Managed a 3-person team through Figma prototyping, GitHub workflows, and feature launches to create a central hub for 200+ members.</li>
+                </ul>
+                <h3 id="hivestorm">Hivestorm Cybersecurity Competition</h3>
+                <p class="date">October - November 2024</p>
+                <ul>
+                    <li>Secured vulnerable Windows/Linux systems in a 4-hour cybersecurity competition by removing malware, patching exploits, and implementing access controls.</li>
+                    <li>Collaborated under pressure with a 4-person team to analyze attack patterns and harden systems using NIST security principles.</li>
+                </ul>
+                <h3 id="nasa-space-apps">NASA Space Apps Challenge</h3>
+                <p class="date">October 2024</p>
+                <ul>
+                    <li>Built an interactive food desert mapping tool using HTML/CSS and Leaflet.js, visualizing underserved areas in Southern California with NASA and Census data.</li>
+                    <li>Developed community reporting features (pin drops, photo uploads) to help residents document food access issues, creating real-world impact for policymakers.</li>
+                </ul>
+                <h3 id="questiongenie">QuestionGenie AI Learning Assistant</h3>
+                <p class="date">May - August 2024</p>
+                <ul>
+                    <li>Built the frontend for QuestionGenie, an AI study tool generating custom explanations and practice problems, using HTML/CSS/JS and integrating Ollama's API.</li>
+                    <li>Collaborated with 4 developers to create a mobile-friendly learning platform, with plans to expand into adaptive quizzes and new subjects.</li>
+                </ul>
+                <h3 id="supply-chain-analysis">Supply Chain Analysis</h3>
+                <p class="date">January - May 2024</p>
+                <ul>
+                    <li>Designed a new car model concept by analyzing customer needs (price, features, convenience) and proposed production improvements that could boost efficiency by 15-20%.</li>
+                    <li>Created cost-benefit reports and presentations showing how strategic changes (workflow tweaks, smart outsourcing) could increase output without sacrificing quality.</li>
+                </ul>
+                <h3 id="etsy-analysis">Etsy Analysis</h3>
+                <p class="date">August - December 2023</p>
+                <ul>
+                    <li>Researched Etsy's business strategy by analyzing their management approach, financial health, and competitive position through SWOT analysis.</li>
+                    <li>Created and delivered a 15-minute presentation with visual aids summarizing key findings on Etsy's unique "handmade marketplace" challenges and opportunities.</li>
+                </ul>
             </section>
             <div class="back-to-top">
                 <a href="#top">Back to top</a>
