@@ -205,7 +205,7 @@
 <body>
     <header>
         <h1>Amal Latif</h1>
-        <p>M.S. in Business Analytics | B.S. in Business Administration (CIS)</p>
+        <p>M.S. in Business Analytics, UC Irvine | B.S. in Business Administration (CIS)</p>
     </header>
     <nav>
         <a href="index.html">Home</a>
@@ -219,7 +219,17 @@
         <aside class="sidebar">
             <h3>On this page</h3>
             <ul>
-                <li><a href="#projects">Projects</a>
+                <li><a href="#projects">MSBA Projects</a>
+                    <ul>
+                        <li><a href="#insuremep-capstone">InsureMEP AI Onboarding Capstone</a></li>
+                        <li><a href="#rental-dashboard">AI Rental Market Intelligence Dashboard</a></li>
+                        <li><a href="#salary-premium">Salary Premium of AI Skills in Supply Chain</a></li>
+                        <li><a href="#high-note">Premium Conversion on High Note</a></li>
+                        <li><a href="#hr-analytics">Predicting Employee Job Satisfaction</a></li>
+                        <li><a href="#hit-songs">Predicting Hit Songs — Spotify</a></li>
+                    </ul>
+                </li>
+                <li><a href="#undergrad-projects">Undergraduate & Personal Projects</a>
                     <ul>
                         <li><a href="#kittyeclipse">KittyEclipse Robotic Therapy Cat</a></li>
                         <li><a href="#women-in-tech">Women in Tech Website Development</a></li>
@@ -234,7 +244,49 @@
         </aside>
         <main class="main-content">
             <section id="projects" class="section">
-                <h2>Projects</h2>
+                <h2>MSBA Projects (UC Irvine)</h2>
+                <h3 id="insuremep-capstone">InsureMEP AI Onboarding Capstone &mdash; Report & Documentation Lead</h3>
+                <p class="date">January - June 2026</p>
+                <ul>
+                    <li>Served as Report & Documentation Lead on a 5-person MSBA consulting team engaged by InsureMEP, a proptech/insurtech startup, to prototype AI-powered automation for building asset onboarding.</li>
+                    <li>Authored all project deliverables: Statement of Work, EDA findings, evaluation reports, technical architecture documentation, and the 14-page final client report submitted to InsureMEP leadership and UCI faculty.</li>
+                    <li>Coordinated stakeholder communication across 10+ documented client meetings with InsureMEP's CEO, technical partner, and UCI administrators.</li>
+                    <li>Contributed to EDA on 3,500+ asset obligation records across HVAC, Fire/Life Safety, Electrical, and Plumbing systems.</li>
+                    <li>Team built an AI onboarding workbench using Gemini 2.0 Flash, Q-learning RL, spaCy, Streamlit, GraphQL, and Supabase; improved image classification from 78% baseline to &gt;85% accuracy; reduced onboarding time from 40&ndash;80 hours to 2&ndash;4 hours per building.</li>
+                    <li>Live workbench: <a href="https://insuremep-ucicapstone.streamlit.app" target="_blank" rel="noopener">insuremep-ucicapstone.streamlit.app</a></li>
+                </ul>
+                <h3 id="rental-dashboard">AI Rental Market Intelligence Dashboard</h3>
+                <p class="date">Spring 2026 &middot; Deep Learning & Applications &middot; Team of 4</p>
+                <ul>
+                    <li>Built an autonomous LLM-powered rental monitoring system: RentCast API live listings, rule-based deal scoring ($/sqft vs. ZIP median), and GPT-4o-mini market briefs running every 15 minutes via APScheduler.</li>
+                    <li>Agentic pipeline (Fetch &rarr; Score &rarr; Store &rarr; Detect &rarr; Analyze &rarr; Update) with zero user intervention; separated scoring logic from LLM narration to eliminate hallucination risk.</li>
+                    <li>Tech stack: Python &middot; GPT-4o-mini &middot; RentCast API &middot; SQLite &middot; Streamlit</li>
+                </ul>
+                <h3 id="salary-premium">Salary Premium of AI Skills in Supply Chain</h3>
+                <p class="date">Spring 2026 &middot; AI Impact on Firms, Society & Economy &middot; Team of 5</p>
+                <ul>
+                    <li>Analyzed 123,849 LinkedIn job postings (2023&ndash;2024); found AI-skill salary gap of $53,927 (Welch's t = 22.72, p &lt; 0.001, Cohen's d = 1.04).</li>
+                    <li>Built a binary AI-skill indicator via keyword matching; normalized salary formats; applied regression to control for seniority.</li>
+                </ul>
+                <h3 id="high-note">Understanding Premium Conversion on High Note &mdash; Causal Analytics</h3>
+                <p class="date">Winter 2026 &middot; Customer & Social Analytics &middot; Team of 4</p>
+                <ul>
+                    <li>Applied propensity score matching, logistic regression, and regression discontinuity design to isolate the causal effect of peer networks on free-to-premium conversion; found a 9.1 pp treatment effect (p &lt; 0.001), OR = 1.134 per additional premium friend.</li>
+                </ul>
+                <h3 id="hr-analytics">Predicting Employee Job Satisfaction &mdash; IBM HR Analytics</h3>
+                <p class="date">Fall 2025 &middot; Machine Learning &middot; Team of 4</p>
+                <ul>
+                    <li>Applied KNN and Random Forest classifiers to 1,470 IBM HR records; Random Forest achieved 61.9% cross-validated accuracy using SMOTE, one-hot encoding, and grid-search tuning.</li>
+                    <li>Identified overtime exposure and promotion stagnation as key dissatisfaction drivers.</li>
+                </ul>
+                <h3 id="hit-songs">Predicting Hit Songs &mdash; Spotify Audio Features</h3>
+                <p class="date">Fall 2025 &middot; Data & Programming for Analytics &middot; Team of 4</p>
+                <ul>
+                    <li>Trained Logistic Regression (67%), Decision Tree (68%), and Random Forest (75%) models on 2,018 Spotify tracks using 13 audio features with a stratified 70/30 split.</li>
+                </ul>
+            </section>
+            <section id="undergrad-projects" class="section">
+                <h2>Undergraduate & Personal Projects</h2>
                 <h3 id="kittyeclipse">KittyEclipse Robotic Therapy Cat</h3>
                 <p class="date">December 2024 - Present</p>
                 <ul>
